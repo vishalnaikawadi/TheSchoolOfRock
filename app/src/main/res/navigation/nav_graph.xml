@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/moviesPlayingNowFragment">
+
+    <fragment
+        android:id="@+id/moviesPlayingNowFragment"
+        android:name="com.vmn.theschoolofrock.MoviesPlayingNowFragment"
+        android:label="MoviesPlayingNowFragment">
+        <action
+            android:id="@+id/action_moviesPlayingNowFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="com.vmn.theschoolofrock.MovieDetailsFragment"
+        android:label="fragment_movie_details"
+        tools:layout="@layout/fragment_movie_details">
+        <argument
+            android:name="movieCommon"
+            app:argType="com.vmn.theschoolofrock.model.ResultCommon" />
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_reviewsFragment"
+            app:destination="@id/reviewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouritesFragment"
+        android:name="com.vmn.theschoolofrock.FavouritesFragment"
+        android:label="fragment_favourites"
+        tools:layout="@layout/fragment_favourites" />
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.vmn.theschoolofrock.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" />
+    <fragment
+        android:id="@+id/reviewsFragment"
+        android:name="com.vmn.theschoolofrock.ReviewsFragment"
+        android:label="ReviewsFragment" />
+</navigation>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="posterImage">poster %s</string>
+    <string name="posterTitle">title %s</string>
+</resources>
